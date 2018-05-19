@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.qhwy.quartet.pay.bank.dao.impl.BankCardBinDaoImpl" >
+  <resultMap id="BaseResultMap" type="com.qhwy.quartet.pay.bank.entity.BankCardBin" >
+    <id column="ID" property="id" jdbcType="DECIMAL" />
+    <result column="BANK_ID" property="bankId" jdbcType="DECIMAL" />
+    <result column="BANK_NAME" property="bankName" jdbcType="VARCHAR" />
+    <result column="BANK_NAME2" property="bankName2" jdbcType="VARCHAR" />
+    <result column="CARD_LEN" property="cardLen" jdbcType="DECIMAL" />
+    <result column="CARD_BIN" property="cardBin" jdbcType="VARCHAR" />
+    <result column="CARD_BIN_LEN" property="cardBinLen" jdbcType="DECIMAL" />
+    <result column="CARD_TYPE" property="cardType" jdbcType="DECIMAL" />
+    <result column="BACK_CODE" property="backCode" jdbcType="VARCHAR" />
+    <result column="CARD_NAME" property="cardName" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    ID, BANK_ID, BANK_NAME, BANK_NAME2, CARD_LEN, CARD_BIN, CARD_BIN_LEN, CARD_TYPE, 
+    BACK_CODE, CARD_NAME
+  </sql>
+  
+  
+  
+</mapper>

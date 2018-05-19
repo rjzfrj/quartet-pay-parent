@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.qhwy.quartet.pay.bank.dao.impl.BankCityDaoImpl" >
+  <resultMap id="BaseResultMap" type="com.qhwy.quartet.pay.bank.entity.BankCity" >
+    <id column="ID" property="id" jdbcType="DECIMAL" />
+    <result column="PROVINCE_ID" property="provinceId" jdbcType="DECIMAL" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="CODE" property="code" jdbcType="DECIMAL" />
+    <result column="END_CODE" property="endCode" jdbcType="DECIMAL" />
+    <result column="SORT" property="sort" jdbcType="DECIMAL" />
+    <result column="ORG_NAME" property="orgName" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    ID, PROVINCE_ID, NAME, CODE, END_CODE, SORT, ORG_NAME
+  </sql>
+  
+  
+</mapper>

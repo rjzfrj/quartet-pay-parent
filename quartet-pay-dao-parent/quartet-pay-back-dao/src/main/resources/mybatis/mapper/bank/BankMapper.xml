@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.qhwy.quartet.pay.bank.dao.impl.BankDaoImpl" >
+  <resultMap id="BaseResultMap" type="com.qhwy.quartet.pay.bank.entity.Bank" >
+    <id column="ID" property="id" jdbcType="DECIMAL" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="CODE" property="code" jdbcType="VARCHAR" />
+    <result column="DESCRIPTION" property="description" jdbcType="VARCHAR" />
+    <result column="CREATE_TIME" property="createTime" jdbcType="TIMESTAMP" />
+    <result column="CATGNO" property="catgno" jdbcType="DECIMAL" />
+    <result column="CATG_NAME" property="catgName" jdbcType="VARCHAR" />
+    <result column="STATUS" property="status" jdbcType="DECIMAL" />
+    <result column="BANK_CODE" property="bankCode" jdbcType="VARCHAR" />
+    <result column="ZX_BANK_CODE" property="zxBankCode" jdbcType="VARCHAR" />
+    <result column="IS_COMMON" property="isCommon" jdbcType="DECIMAL" />
+    <result column="SHORT_CODE" property="shortCode" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    ID, NAME, CODE, DESCRIPTION, CREATE_TIME, CATGNO, CATG_NAME, STATUS, BANK_CODE, ZX_BANK_CODE, 
+    IS_COMMON, SHORT_CODE
+  </sql>
+  
+  
+   <select id="searchBankList" resultMap="BaseResultMap" parameterType="com.qhwy.quartet.pay.bank.entity.Bank"  >
+    SELECT * FROM BANK
+    <where>
+    	<if test="status != null">
+    		STATUS = #{status,jdbcType=DECIMAL}
+    	</if>
+    </where>
+  </select>
+  
+</mapper>

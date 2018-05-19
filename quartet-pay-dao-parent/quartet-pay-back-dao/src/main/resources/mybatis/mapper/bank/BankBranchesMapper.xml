@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.qhwy.quartet.pay.bank.dao.impl.BankBranchesDaoImpl" >
+  <resultMap id="BaseResultMap" type="com.qhwy.quartet.pay.bank.entity.BankBranches" >
+    <id column="ID" property="id" jdbcType="DECIMAL" />
+    <result column="BANK_ID" property="bankId" jdbcType="DECIMAL" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="PROVINCE_ID" property="provinceId" jdbcType="DECIMAL" />
+    <result column="CITY_ID" property="cityId" jdbcType="DECIMAL" />
+    <result column="CODE" property="code" jdbcType="VARCHAR" />
+    <result column="INVALID" property="invalid" jdbcType="DECIMAL" />
+    <result column="ACTOR_CODE" property="actorCode" jdbcType="VARCHAR" />
+    <result column="PROVINCE_CODE" property="provinceCode" jdbcType="VARCHAR" />
+    <result column="CITY_CODE" property="cityCode" jdbcType="VARCHAR" />
+    <result column="BANK_CODE" property="bankCode" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    ID, BANK_ID, NAME, PROVINCE_ID, CITY_ID, CODE, INVALID, ACTOR_CODE, PROVINCE_CODE, 
+    CITY_CODE, BANK_CODE
+  </sql>
+  
+  
+</mapper>
